@@ -28,6 +28,9 @@ body {
     background-color: 20px;
     color: orange;
     background-color: black;
+    font-size: 35px;
+    display: flex;
+    justify-content: end;
 }
 
 .main {
@@ -52,7 +55,12 @@ button {
 }
 
 .false {
-    color: white;
+    color: orange;
     background-color: black;
     font-size: 35px;
+    display: flex;
+    width: 380px;
+    height: 45px;
+    align-items: center;
+    justify-content: end;
 }
