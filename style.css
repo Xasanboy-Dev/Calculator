@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.up {
+    width: 380px;
+    height: 80px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.placeholder {
+    padding-bottom: 50px;
+    width: 340px;
+    height: 1px;
+}
+
+.true {
+    background-color: 20px;
+    color: orange;
+    background-color: black;
+}
+
+.main {
+    padding: 20%;
+}
+
+.down {
+    box-shadow: 3px 3px red, -1em 0 .4em white;
+    width: 380px;
+    padding: 20px 20px;
+    background-color: white;
+    border: 2px groove black;
+    border-radius: 5px;
+}
+
+button {
+    color: aqua;
+    background-color: black;
+    border: 1px groove white;
+    font-size: 45px;
+    width: 80px;
+}
+
+.false {
+    color: white;
+    background-color: black;
+    font-size: 35px;
+}
