@@ -99,46 +99,44 @@ function delet() {
     }
 }
 function plus() {
-    let g = document.querySelector(".false").innerText
-    let u = document.querySelector(".true").innerText
+    let fl = document.querySelector(".false").innerText
+    document.querySelector(".true").innerText = fl + " " + "+"
     document.querySelector(".false").innerText = ""
-    if (u == "" && g !== "") {
-        document.querySelector(".true").innerText = g + "+"
-        document.querySelector(".false").innerText = ""
-    } else if (u !== "" && g == "") {
-        document.querySelector(".true").innerText = u
-    } else {
-        let text = ""
-        let r = 0
-        for (r in u) {
-            if (r >= u.length - 1) {
-                break
-            } else {
-                text += u[r]
-            }
-        }
-        document.querySelector(".true").innerText = Number(text) + Number(g)
-    }
 }
 function minus() {
-    let g = document.querySelector(".false").innerText
-    let u = document.querySelector(".true").innerText
+    let fl = document.querySelector(".false").innerText
+    document.querySelector(".true").innerText = fl + " " + "-"
     document.querySelector(".false").innerText = ""
-    if (u == "" && g !== "") {
-        document.querySelector(".true").innerText = g + "-"
-        document.querySelector(".false").innerText = ""
-    } else if (u !== "" && g == "") {
-        document.querySelector(".true").innerText = u
+}
+function delet() {
+    let fl = document.querySelector(".false").innerText
+    document.querySelector(".true").innerText = fl + " " + ":"
+    document.querySelector(".false").innerText = ""
+}
+function um() {
+    let fl = document.querySelector(".false").innerText
+    document.querySelector(".true").innerText = fl + " " + "*"
+    document.querySelector(".false").innerText = ""
+}
+function ravno() {
+    let r = document.querySelector(".true").innerText.split(" ")
+    if (r[r.length - 1] == "+") {
+        document.querySelector(".false").innerText = Number(document.querySelector(".false").innerText) + Number(r[0])
+        document.querySelector(".true").innerText = ""
+    } else if (r[r.length - 1] == "-") {
+        document.querySelector(".false").innerText = Number(r[0]) - Number(document.querySelector(".false").innerText)
+        document.querySelector(".true").innerText = ""
+    } else if (r[r.length - 1] == ":") {
+        document.querySelector(".false").innerText = Number(r[0]) / Number(document.querySelector(".false").innerText)
+        document.querySelector(".true").innerText = ""
     } else {
-        let text = ""
-        let r = 0
-        for (r in u) {
-            if (r >= u.length - 1) {
-                break
-            } else {
-                text += u[r]
-            }
-        }
-        document.querySelector(".true").innerText = Number(text) - Number(g)
+        document.querySelector(".false").innerText = Number(r[0]) * Number(document.querySelector(".false").innerText)
+        document.querySelector(".true").innerText = ""
     }
+}
+function root() {
+    document.querySelector(".false").innerText = Math.sqrt(Number(document.querySelector(".false").innerText), 2)
+}
+function square() {
+    document.querySelector(".false").innerText = Number(document.querySelector(".false").innerText) ** 2
 }
